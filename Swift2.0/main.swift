@@ -10,6 +10,322 @@ import Foundation
 
 print("Hello, World!")
 
+//
+//  main.swift
+//  Swift2.0
+//
+//  Created by Chuanxun on 16/1/7.
+//  Copyright © 2016年 Chuanxun. All rights reserved.
+//
+
+
+//http://wiki.jikexueyuan.com/project/swift/chapter1/02_a_swift_tour.html
+
+
+import Foundation
+
+print("Hello, World!")
+
+
+/*
+
+/**
+var 变量
+let 常量
+
+swift没有隐式类型转换
+*/
+var intVar = 10
+var doubleVar:Double = 20.5
+var bookName:String = "The Swift Programming Language "
+var info = bookName + String(doubleVar)
+print(info)
+
+let constNum = 888
+
+
+//有一种更简单的把值转换成字符串的方法：把值写到括号中，并且在括号之前写一个反斜杠。
+var des = "I buy \(bookName)"
+print(des)
+
+
+/**
+Array:
+
+Dictionary:
+*/
+
+let shoopingList = ["book","food","iPhone",]
+let price = ["book":28.5,"food":10,"iPhone":5888]
+print(shoopingList)
+print(price)
+
+let familyMember:[String] = ["father","mother","brother","sister"]
+let familyAge = [String:Int]()
+print(familyMember)
+
+
+
+//if语句判断条件必须是bool，循环和条件语句的包裹条件和循环变量括号可以省略，但是语句体的括号不能省略
+if price.count == 3 {
+print("price.count = 3")
+}
+
+var shoopings = ""
+for shooping in shoopingList {
+shoopings += shooping
+}
+print(shoopings)
+
+
+/**
+如果变量的可选值是nil，条件会判断为false，大括号中的代码会被跳过。如果不是nil，会将值赋给let后面的常量，这样代码块中就可以使用这个值了。
+*/
+
+var optionalString: String? = "Hello"
+print(optionalString == nil)
+
+var optionalName: String? = nil
+var greeting = "Hello!"
+if let name = optionalName {
+greeting = "Hello, \(name)"
+}else {
+greeting = "Hello Leon"
+}
+print(greeting)
+
+//另一种处理可选值的方法是通过使用 ?? 操作符来提供一个默认值。如果可选值缺失的话，可以使用默认值来代替。
+var optionalName2 = "Hi, \(optionalName ?? "Leon")"
+print(optionalName2)
+
+
+
+//switch支持任意类型的数据以及各种比较操作——不仅仅是整数以及测试相等。
+let vegetable = "red pepper"
+switch vegetable {
+case "celery":
+print("Add some raisins and make ants on a log.")
+case "cucumber", "watercress":
+print("That would make a good tea sandwich.")
+case let x where x.hasSuffix("pepper"):
+print("Is it a spicy \(x)?")
+default:
+print("Everything tastes good in soup.")
+}
+
+
+//for in
+let interestingNumbers = [
+"Prime": [2, 3, 5, 7, 11, 13],
+"Fibonacci": [1, 1, 2, 3, 5, 8],
+"Square": [1, 4, 9, 16, 25],
+]
+var largest = 0
+for (kind, numbers) in interestingNumbers {
+for number in numbers {
+if number > largest {
+largest = number
+}
+}
+}
+print(largest)
+
+
+//while
+var n = 2
+while n < 100 {
+n = n * 2
+}
+print(n)
+
+repeat {
+n = n * 2
+}while n < 1000
+
+print(n)
+
+// ..< 和 ...运算符, 使用 ..<创建的范围不包含上界，如果想包含的话需要使用...
+for i in 0 ..< 10 {
+print(i)
+}
+
+
+
+/**
+使用func来声明一个函数，使用名字和参数来调用函数。使用->来指定函数返回值的类型。
+
+
+*/
+func sayHello(name:String,day:String) ->String {
+return "Hello \(name) \(day)"
+}
+
+var thatWorld = sayHello("leon", day: "2016-01-09")
+print(thatWorld)
+
+
+//使用元组来让一个函数返回多个值。该元组的元素可以用名称或数字来表示。
+func caculateStatistics(nums:[Int]) -> (min:Int,max:Int,avg:Float) {
+var min:Int = nums[0]
+var max:Int = nums[0]
+var sum:Int = 0
+var avg:Float = 0.0
+
+for i in nums {
+if i < min {
+min = i
+}else if i > max {
+max = i
+}
+sum += i
+}
+
+avg = Float(sum) / Float(nums.count)
+
+return (min,max,avg)
+}
+
+var statistics = caculateStatistics([1,10,2,8])
+print(statistics.max)
+print(statistics.2)
+
+
+
+//函数可以带有可变个数的参数，这些参数在函数内表现为数组的形式：
+func variableParams(nums:Int...) -> Int {
+var max:Int = 0
+for i in nums {
+if i > max {
+max = i
+}
+}
+
+return max
+}
+
+//函数可以嵌套。被嵌套的函数可以访问外侧函数的变量，你可以使用嵌套函数来重构一个太长或者太复杂的函数
+func returnFifteen() -> Int {
+var y = 10
+func add() {
+y += 5
+}
+add()
+return y
+}
+returnFifteen()
+
+
+//函数是第一等类型，这意味着函数可以作为另一个函数的返回值。
+func makeIncrementer() -> ((Int,Int) -> Int) {
+func addOne(number: Int,number2: Int) -> Int {
+return 1 + number + number2
+}
+return addOne
+}
+var increment = makeIncrementer()
+var result = increment(7,8)
+print(result)
+
+
+
+//函数也可以当做参数传入另一个函数。
+func hasAnyMatches(list: [Int], condition: Int -> Bool) -> Bool {
+for item in list {
+if condition(item) {
+return true
+}
+}
+return false
+}
+func lessThanTen(number: Int) -> Bool {
+return number < 10
+}
+var numbers = [20, 19, 7, 12]
+hasAnyMatches(numbers, condition: lessThanTen)
+
+
+
+/**
+闭包
+是一段代码，
+函数是特殊的闭包，可以通过函数名进行调用
+
+你可以使用{}来创建一个匿名闭包。使用in将参数和返回值类型声明与闭包函数体进行分离。
+
+*/
+var mapResult = numbers.map({
+(number: Int) -> Int in    //使用｀in｀分离｀参数返回值类型｀和｀函数体｀
+var result = 3 * number
+if number % 2 != 0 {
+result = 0
+}
+return result
+})
+print(mapResult)
+
+
+//如果一个闭包的类型已知，比如作为一个回调函数，你可以忽略参数的类型和返回值。单个语句闭包会把它语句的值当做结果返回。
+let mappedNumbers = numbers.map({ number in 3 * number })
+print(mappedNumbers)
+
+
+//你可以通过参数位置而不是参数名字来引用参数——这个方法在非常短的闭包中非常有用。当一个闭包作为最后一个参数传给一个函数的时候，它可以直接跟在括号后面。当一个闭包是传给函数的唯一参数，你可以完全忽略括号。
+numbers = [10,25,15,30]
+let sortedNumbers = numbers.sort { $0 > $1 }
+print(sortedNumbers)
+
+
+
+
+/**
+Class
+
+
+*/
+
+class Person {
+var name:String
+var age:Int = 0
+
+init(name:String,age:Int) {
+self.name = name
+self.age = age
+}
+
+deinit {
+print("deinit")
+}
+
+func simpleDesc() -> String {
+return "\(self.name),\(self.age)"
+}
+}
+
+var p1 = Person(name: "leon", age: 31)
+print(p1.simpleDesc())
+
+
+//继承
+class Teacher : Person {
+var teachYears:Int = 0
+
+init(name:String,age:Int,teachYears:Int) {
+super.init(name: name, age: age)
+self.teachYears = teachYears
+}
+
+override func simpleDesc() -> String {
+let desc = super.simpleDesc()
+return "Teacher " + desc
+}
+
+}
+var t1 = Teacher(name: "leon", age: 31, teachYears: 9)
+print(t1.simpleDesc())
+
+*/
+
+
 /*
 /**
 var 变量
@@ -1080,6 +1396,174 @@ for codeUnit in dogString.unicodeScalars {
 }
 print("\n")
 
+*/
+
+
+/*
+//closure 闭包
+var person = ["Leon","Lampard","Messi","Ronalod","Bogba","Nedved"]
+var sortedPerson = person.sort({(string1:String,string2:String)->Bool in return string1 < string2})
+print(sortedPerson)
+var sortedPerson2 = person.sort({(s1,s2) in return s1 > s2})
+print(sortedPerson2)
+sortedPerson2 = person.sort({$0 < $1})
+print(sortedPerson2)
+
+
+
+//尾随闭包
+/*
+尾随闭包是一个书写在函数括号之后的闭包表达式，函数支持将其作为最后一个参数调用：
+如果函数只需要闭包表达式一个参数，当您使用尾随闭包时，您甚至可以把()省略掉：
+*/
+var nums = [12,30,54,67,9,888]
+let digitNames = [
+    0: "Zero", 1: "One", 2: "Two",   3: "Three", 4: "Four",
+    5: "Five", 6: "Six", 7: "Seven", 8: "Eight", 9: "Nine"
+]
+
+var output = nums.map {
+    (var number)->String in
+    var output:String = ""
+    while number > 0 {
+        output = digitNames[number % 10]! + output
+        number /= 10
+    }
+    
+    return output
+}
+print(output)
+
+//闭包值捕获
+func makeIncrement(forIncrement:Int)->()->Int {
+    var totalNum = 0
+    func increment()->Int {
+        totalNum += forIncrement
+        return totalNum;
+    }
+    return increment
+}
+
+var incrementer = makeIncrement(10)
+print(incrementer())
+print(incrementer())
+
+var incrementer2 = makeIncrement(7)
+print(incrementer2())
+print(incrementer2())
+
+//闭包是引用类型
+
+/*
+//非逃逸闭包，默认是逃逸
+当一个闭包作为参数传到一个函数中，但是这个闭包在函数返回之后才被执行，我们称该闭包从函数中逃逸。当你定义接受闭包作为参数的函数时，你可以在参数名之前标注@noescape，用来指明这个闭包是不允许“逃逸”出这个函数的。将闭包标注@noescape能使编译器知道这个闭包的生命周期（译者注：闭包只能在函数体中被执行，不能脱离函数体执行，所以编译器明确知道运行时的上下文），从而可以进行一些比较激进的优化。
+*/
+
+var completeHandles:[()->Void] = []
+func someFuncWithEscapeClosure(closure:()->Void){
+    completeHandles.append(closure)
+}
+
+func someFuncWithNoEscapeClosuer(@noescape closure:()->Void){
+    closure()
+}
+
+class Test {
+    var x = 0
+    func domeSomething(){
+        someFuncWithEscapeClosure(){
+            self.x = 20
+        }
+        someFuncWithNoEscapeClosuer(){
+            x = 40
+        }
+    }
+}
+
+var test = Test()
+test.domeSomething()
+print(test.x)
+
+completeHandles.first?()
+print(test.x)
+
+
+//自动闭包
+//自动闭包是一种自动创建的闭包，用于包装传递给函数作为参数的表达式。这种闭包不接受任何参数，当它被调用的时候，会返回被包装在其中的表达式的值。这种便利语法让你能够用一个普通的表达式来代替显式的闭包，从而省略闭包的花括号。
+var customersInLine = ["Ewa", "Barry", "Daniella"]
+func serveCustomer(@autoclosure customerProvider: () -> String) {
+    print("Now serving \(customerProvider())!")
+}
+serveCustomer(customersInLine.removeAtIndex(0))
+// prints "Now serving Ewa!"
+
+*/
+
+
+//enum
+enum Animate {
+    case Dog
+    case Cat
+    case Chicken
+    case Human
+    case Mix1(Int,Int)
+    case Mix2(String)
+}
+
+var aDog = Animate.Dog
+var aMix1 = Animate.Mix1(10, 20)
+var aMix2 = Animate.Mix2("Leon")
+print(aDog)
+print(aMix1)
+print(aMix2)
+aMix1 = Animate.Mix1(20, 30)
+print(aMix1)
+
+
+//原始值
+enum ASCIIControlCharacter: Character {
+    case Tab = "\t"
+    case LineFeed = "\n"
+    case CarriageReturn = "\r"
+}
+print(ASCIIControlCharacter.Tab)
+var tab = ASCIIControlCharacter.Tab
+print(tab)
+print(tab.rawValue)
+
+
+//递归枚举 非常牛逼🐂
+/*
+当各种可能的情况可以被穷举时，非常适合使用枚举进行数据建模，例如可以用枚举来表示用于简单整数运算的操作符。这些操作符让你可以将简单的算术表达式，例如整数5，结合为更为复杂的表达式，例如5 + 4。
+
+算术表达式的一个重要特性是，表达式可以嵌套使用。例如，表达式(5 + 4) * 2，乘号右边是一个数字，左边则是另一个表达式。因为数据是嵌套的，因而用来存储数据的枚举类型也需要支持这种嵌套——这意味着枚举类型需要支持递归。
+
+递归枚举（recursive enumeration）是一种枚举类型，它有一个或多个枚举成员使用该枚举类型的实例作为关联值。使用递归枚举时，编译器会插入一个间接层。你可以在枚举成员前加上indirect来表示该成员可递归。
+*/
+
+
+enum ArithmeticExpression {
+    case Number(Int)
+    indirect case Addition(ArithmeticExpression, ArithmeticExpression)
+    indirect case Multiplication(ArithmeticExpression, ArithmeticExpression)
+}
+
+func evaluate(expression: ArithmeticExpression) -> Int {
+    switch expression {
+    case .Number(let value):
+        return value
+    case .Addition(let left, let right):
+        return evaluate(left) + evaluate(right)
+    case .Multiplication(let left, let right):
+        return evaluate(left) * evaluate(right)
+    }
+}
+
+let five = ArithmeticExpression.Number(5)
+let four = ArithmeticExpression.Number(4)
+let sum = ArithmeticExpression.Addition(five, four)
+let product = ArithmeticExpression.Multiplication(sum, ArithmeticExpression.Number(2))
+print(evaluate(product))
 
 
 //Array
@@ -1378,3 +1862,5 @@ print(num)
 
 
 
+//InitializerTest
+initializerTest()
