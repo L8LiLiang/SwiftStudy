@@ -191,25 +191,30 @@ var textualDescription: String {
 }
 */
 
+
 protocol P3 {
     var name:String {set get}
     func desc()
 }
 
 extension P3 {
-    var name:String {
-        return "unnamed"
-    }
     func desc() {
-        print("unnamed desc")
+        print("\(name) desc")
     }
 }
 
-class C3:P3 {
+class C3: P3 {
+    
     var age = 10
+    var name:String
+    init(){
+        self.age = 100
+        self.name = "xihaha"
+    }
 }
 
-func textProtocolExtension(){
-    var ccc = C3()
-    
+func testProtocolExtension(){
+    let ccc = C3()
+    print(ccc.name)
+    ccc.desc()
 }
