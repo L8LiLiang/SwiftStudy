@@ -16,6 +16,12 @@
 		B9F776051C532CCC0039BCEB /* fun.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F776041C532CCC0039BCEB /* fun.swift */; };
 		B9F776071C532D600039BCEB /* closure.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F776061C532D600039BCEB /* closure.swift */; };
 		B9F776091C532DA00039BCEB /* enum.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F776081C532DA00039BCEB /* enum.swift */; };
+		B9F7760B1C532E520039BCEB /* ARC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F7760A1C532E520039BCEB /* ARC.swift */; };
+		B9F7760D1C5337D10039BCEB /* OptionalChaining.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F7760C1C5337D10039BCEB /* OptionalChaining.swift */; };
+		B9F7760F1C544A4A0039BCEB /* error.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F7760E1C544A4A0039BCEB /* error.swift */; };
+		B9F776111C5454F00039BCEB /* TypeCasting.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F776101C5454F00039BCEB /* TypeCasting.swift */; };
+		B9F776131C5461670039BCEB /* extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F776121C5461670039BCEB /* extension.swift */; };
+		B9F776151C5473D20039BCEB /* protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F776141C5473D20039BCEB /* protocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -41,6 +47,12 @@
 		B9F776041C532CCC0039BCEB /* fun.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = fun.swift; sourceTree = "<group>"; };
 		B9F776061C532D600039BCEB /* closure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = closure.swift; sourceTree = "<group>"; };
 		B9F776081C532DA00039BCEB /* enum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = enum.swift; sourceTree = "<group>"; };
+		B9F7760A1C532E520039BCEB /* ARC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARC.swift; sourceTree = "<group>"; };
+		B9F7760C1C5337D10039BCEB /* OptionalChaining.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionalChaining.swift; sourceTree = "<group>"; };
+		B9F7760E1C544A4A0039BCEB /* error.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = error.swift; sourceTree = "<group>"; };
+		B9F776101C5454F00039BCEB /* TypeCasting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypeCasting.swift; sourceTree = "<group>"; };
+		B9F776121C5461670039BCEB /* extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = extension.swift; sourceTree = "<group>"; };
+		B9F776141C5473D20039BCEB /* protocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = protocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,7 +86,13 @@
 			isa = PBXGroup;
 			children = (
 				B93BA3201C41F5FD00A87486 /* main.swift */,
+				B9F7760A1C532E520039BCEB /* ARC.swift */,
+				B9F7760C1C5337D10039BCEB /* OptionalChaining.swift */,
 				B9F776081C532DA00039BCEB /* enum.swift */,
+				B9F7760E1C544A4A0039BCEB /* error.swift */,
+				B9F776101C5454F00039BCEB /* TypeCasting.swift */,
+				B9F776121C5461670039BCEB /* extension.swift */,
+				B9F776141C5473D20039BCEB /* protocol.swift */,
 				B9F776061C532D600039BCEB /* closure.swift */,
 				B9F776041C532CCC0039BCEB /* fun.swift */,
 				B9F776021C532C120039BCEB /* Control.swift */,
@@ -144,13 +162,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				B9F776051C532CCC0039BCEB /* fun.swift in Sources */,
+				B9F776131C5461670039BCEB /* extension.swift in Sources */,
 				217CAA931C521B1400736866 /* initializer.swift in Sources */,
 				B93BA3211C41F5FD00A87486 /* main.swift in Sources */,
+				B9F776151C5473D20039BCEB /* protocol.swift in Sources */,
 				B9F775FF1C532B5B0039BCEB /* String.swift in Sources */,
+				B9F7760F1C544A4A0039BCEB /* error.swift in Sources */,
 				B9F775FD1C5327C20039BCEB /* ASwiftTour.swift in Sources */,
 				B9F776091C532DA00039BCEB /* enum.swift in Sources */,
 				B9F776071C532D600039BCEB /* closure.swift in Sources */,
+				B9F776111C5454F00039BCEB /* TypeCasting.swift in Sources */,
 				B9F776011C532B7E0039BCEB /* SetArrayDict.swift in Sources */,
+				B9F7760B1C532E520039BCEB /* ARC.swift in Sources */,
+				B9F7760D1C5337D10039BCEB /* OptionalChaining.swift in Sources */,
 				B9F776031C532C120039BCEB /* Control.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
