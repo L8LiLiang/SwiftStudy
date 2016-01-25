@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2144362C1C55BEF20077AD77 /* generics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2144362B1C55BEF20077AD77 /* generics.swift */; };
+		2144362E1C55FD910077AD77 /* AccessControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2144362D1C55FD910077AD77 /* AccessControl.swift */; };
 		217CAA931C521B1400736866 /* initializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 217CAA921C521B1400736866 /* initializer.swift */; };
 		B93BA3211C41F5FD00A87486 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = B93BA3201C41F5FD00A87486 /* main.swift */; };
 		B9F775FD1C5327C20039BCEB /* ASwiftTour.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F775FC1C5327C20039BCEB /* ASwiftTour.swift */; };
@@ -39,6 +40,7 @@
 
 /* Begin PBXFileReference section */
 		2144362B1C55BEF20077AD77 /* generics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = generics.swift; sourceTree = "<group>"; };
+		2144362D1C55FD910077AD77 /* AccessControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccessControl.swift; sourceTree = "<group>"; };
 		217CAA921C521B1400736866 /* initializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = initializer.swift; sourceTree = "<group>"; };
 		B93BA31D1C41F5FD00A87486 /* Swift2.0 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Swift2.0; sourceTree = BUILT_PRODUCTS_DIR; };
 		B93BA3201C41F5FD00A87486 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
@@ -94,6 +96,7 @@
 				B9F776081C532DA00039BCEB /* enum.swift */,
 				B9F7760E1C544A4A0039BCEB /* error.swift */,
 				B9F776101C5454F00039BCEB /* TypeCasting.swift */,
+				2144362D1C55FD910077AD77 /* AccessControl.swift */,
 				B9F776121C5461670039BCEB /* extension.swift */,
 				B9F776141C5473D20039BCEB /* protocol.swift */,
 				B9F776061C532D600039BCEB /* closure.swift */,
@@ -176,6 +179,7 @@
 				2144362C1C55BEF20077AD77 /* generics.swift in Sources */,
 				B9F776071C532D600039BCEB /* closure.swift in Sources */,
 				B9F776111C5454F00039BCEB /* TypeCasting.swift in Sources */,
+				2144362E1C55FD910077AD77 /* AccessControl.swift in Sources */,
 				B9F776011C532B7E0039BCEB /* SetArrayDict.swift in Sources */,
 				B9F7760B1C532E520039BCEB /* ARC.swift in Sources */,
 				B9F7760D1C5337D10039BCEB /* OptionalChaining.swift in Sources */,
