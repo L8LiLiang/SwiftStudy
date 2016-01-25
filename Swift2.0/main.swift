@@ -36,7 +36,16 @@ testTypeCasting()
 extensionTest1()
 */
 
+/*
 protocolTest()
 delegateTest()
 protocolCelebrator()
 testProtocolExtension()
+*/
+
+
+testGenerics()
+testWhere()
+
+
+
