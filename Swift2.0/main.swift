@@ -52,11 +52,20 @@ testAccess2()
 //var c3 = Class3() //public Class3
 //print(c3.value2) //private value2
 
-
+/*
 var cb = ClassB()
 cb.desc()
 
 testGetterSetterAccessControl()
+*/
+
+testOverflowOperator()
+testAssociativity()
+
+
+
+
+
 
 
 

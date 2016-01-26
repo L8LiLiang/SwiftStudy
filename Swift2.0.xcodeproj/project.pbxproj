@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		21428F751C574A6800A0B25B /* operator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21428F741C574A6800A0B25B /* operator.swift */; };
 		2144362C1C55BEF20077AD77 /* generics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2144362B1C55BEF20077AD77 /* generics.swift */; };
 		2144362E1C55FD910077AD77 /* AccessControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2144362D1C55FD910077AD77 /* AccessControl.swift */; };
 		217CAA931C521B1400736866 /* initializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 217CAA921C521B1400736866 /* initializer.swift */; };
@@ -39,6 +40,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		21428F741C574A6800A0B25B /* operator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = operator.swift; sourceTree = "<group>"; };
 		2144362B1C55BEF20077AD77 /* generics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = generics.swift; sourceTree = "<group>"; };
 		2144362D1C55FD910077AD77 /* AccessControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccessControl.swift; sourceTree = "<group>"; };
 		217CAA921C521B1400736866 /* initializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = initializer.swift; sourceTree = "<group>"; };
@@ -90,6 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				B93BA3201C41F5FD00A87486 /* main.swift */,
+				21428F741C574A6800A0B25B /* operator.swift */,
 				2144362B1C55BEF20077AD77 /* generics.swift */,
 				B9F7760A1C532E520039BCEB /* ARC.swift */,
 				B9F7760C1C5337D10039BCEB /* OptionalChaining.swift */,
@@ -182,6 +185,7 @@
 				2144362E1C55FD910077AD77 /* AccessControl.swift in Sources */,
 				B9F776011C532B7E0039BCEB /* SetArrayDict.swift in Sources */,
 				B9F7760B1C532E520039BCEB /* ARC.swift in Sources */,
+				21428F751C574A6800A0B25B /* operator.swift in Sources */,
 				B9F7760D1C5337D10039BCEB /* OptionalChaining.swift in Sources */,
 				B9F776031C532C120039BCEB /* Control.swift in Sources */,
 			);
