@@ -62,3 +62,9 @@ func testAssociativity(){
 
 
 
+
+
+
+
+
+

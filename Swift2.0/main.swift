@@ -63,8 +63,9 @@ testOverflowOperator()
 testAssociativity()
 
 
+testType()
 
-
+testPattern()
 
 
 
