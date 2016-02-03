@@ -59,6 +59,7 @@ cb.desc()
 testGetterSetterAccessControl()
 */
 
+/*
 testOverflowOperator()
 testAssociativity()
 
@@ -66,6 +67,10 @@ testAssociativity()
 testType()
 
 testPattern()
+*/
+
+testPerformSelector()
+
 
 
 

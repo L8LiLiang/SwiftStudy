@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		213644DB1C61D414007C7D9C /* other.swift in Sources */ = {isa = PBXBuildFile; fileRef = 213644DA1C61D414007C7D9C /* other.swift */; };
 		21418AA61C589D78007105AE /* type.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21418AA51C589D78007105AE /* type.swift */; };
 		21428F751C574A6800A0B25B /* operator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21428F741C574A6800A0B25B /* operator.swift */; };
 		2144362C1C55BEF20077AD77 /* generics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2144362B1C55BEF20077AD77 /* generics.swift */; };
@@ -41,6 +42,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		213644DA1C61D414007C7D9C /* other.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = other.swift; sourceTree = "<group>"; };
 		21418AA51C589D78007105AE /* type.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = type.swift; sourceTree = "<group>"; };
 		21428F741C574A6800A0B25B /* operator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = operator.swift; sourceTree = "<group>"; };
 		2144362B1C55BEF20077AD77 /* generics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = generics.swift; sourceTree = "<group>"; };
@@ -112,6 +114,7 @@
 				B9F775FE1C532B5B0039BCEB /* String.swift */,
 				B9F775FC1C5327C20039BCEB /* ASwiftTour.swift */,
 				217CAA921C521B1400736866 /* initializer.swift */,
+				213644DA1C61D414007C7D9C /* other.swift */,
 			);
 			path = Swift2.0;
 			sourceTree = "<group>";
@@ -181,6 +184,7 @@
 				B9F775FF1C532B5B0039BCEB /* String.swift in Sources */,
 				B9F7760F1C544A4A0039BCEB /* error.swift in Sources */,
 				B9F775FD1C5327C20039BCEB /* ASwiftTour.swift in Sources */,
+				213644DB1C61D414007C7D9C /* other.swift in Sources */,
 				B9F776091C532DA00039BCEB /* enum.swift in Sources */,
 				2144362C1C55BEF20077AD77 /* generics.swift in Sources */,
 				B9F776071C532D600039BCEB /* closure.swift in Sources */,
