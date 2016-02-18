@@ -57,11 +57,11 @@ return totalNum;
 return increment
 }
 var incrementer = makeIncrement(10)
-print(incrementer())
-print(incrementer())
+print(incrementer())//10
+print(incrementer())//20
 var incrementer2 = makeIncrement(7)
-print(incrementer2())
-print(incrementer2())
+print(incrementer2())//7
+print(incrementer2())//14
 //闭包是引用类型
 /*
 //非逃逸闭包，默认是逃逸
