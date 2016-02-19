@@ -66,12 +66,12 @@ testAssociativity()
 
 testType()
 
-testPattern()
 */
 
-testPerformSelector()
+//testPerformSelector()
 
 
+testPattern()
 
 
 

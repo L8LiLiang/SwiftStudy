@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		212E71061C77003B009D84B6 /* UIImage+extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 212E71051C77003B009D84B6 /* UIImage+extension.m */; };
 		213644DB1C61D414007C7D9C /* other.swift in Sources */ = {isa = PBXBuildFile; fileRef = 213644DA1C61D414007C7D9C /* other.swift */; };
 		21418AA61C589D78007105AE /* type.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21418AA51C589D78007105AE /* type.swift */; };
 		21428F751C574A6800A0B25B /* operator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21428F741C574A6800A0B25B /* operator.swift */; };
@@ -66,6 +67,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		212E71031C77003A009D84B6 /* UsingSiwftWithCocoaAndObjectC-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UsingSiwftWithCocoaAndObjectC-Bridging-Header.h"; sourceTree = "<group>"; };
+		212E71041C77003B009D84B6 /* UIImage+extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+extension.h"; sourceTree = "<group>"; };
+		212E71051C77003B009D84B6 /* UIImage+extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+extension.m"; sourceTree = "<group>"; };
 		213644DA1C61D414007C7D9C /* other.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = other.swift; sourceTree = "<group>"; };
 		21418AA51C589D78007105AE /* type.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = type.swift; sourceTree = "<group>"; };
 		21428F741C574A6800A0B25B /* operator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = operator.swift; sourceTree = "<group>"; };
@@ -143,6 +147,9 @@
 				21738F991C7453FF001813F0 /* Assets.xcassets */,
 				21738F9B1C7453FF001813F0 /* LaunchScreen.storyboard */,
 				21738F9E1C7453FF001813F0 /* Info.plist */,
+				212E71041C77003B009D84B6 /* UIImage+extension.h */,
+				212E71051C77003B009D84B6 /* UIImage+extension.m */,
+				212E71031C77003A009D84B6 /* UsingSiwftWithCocoaAndObjectC-Bridging-Header.h */,
 			);
 			path = UsingSiwftWithCocoaAndObjectC;
 			sourceTree = "<group>";
@@ -367,6 +374,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				21738F951C7453FF001813F0 /* ViewController.swift in Sources */,
+				212E71061C77003B009D84B6 /* UIImage+extension.m in Sources */,
 				21738F931C7453FF001813F0 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -453,6 +461,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = UsingSiwftWithCocoaAndObjectC/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
@@ -460,6 +469,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = elane.UsingSiwftWithCocoaAndObjectC;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "UsingSiwftWithCocoaAndObjectC/UsingSiwftWithCocoaAndObjectC-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -468,6 +479,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = UsingSiwftWithCocoaAndObjectC/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
@@ -475,6 +487,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = elane.UsingSiwftWithCocoaAndObjectC;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "UsingSiwftWithCocoaAndObjectC/UsingSiwftWithCocoaAndObjectC-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -625,6 +638,7 @@
 		B93BA3251C41F5FD00A87486 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				DEFINES_MODULE = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -632,6 +646,7 @@
 		B93BA3261C41F5FD00A87486 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				DEFINES_MODULE = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -646,6 +661,7 @@
 				21738FB71C7453FF001813F0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		21738FB81C7453FF001813F0 /* Build configuration list for PBXNativeTarget "UsingSiwftWithCocoaAndObjectCTests" */ = {
 			isa = XCConfigurationList;
@@ -654,6 +670,7 @@
 				21738FBA1C7453FF001813F0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		21738FBB1C7453FF001813F0 /* Build configuration list for PBXNativeTarget "UsingSiwftWithCocoaAndObjectCUITests" */ = {
 			isa = XCConfigurationList;
@@ -662,6 +679,7 @@
 				21738FBD1C7453FF001813F0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B93BA3181C41F5FD00A87486 /* Build configuration list for PBXProject "Swift2.0" */ = {
 			isa = XCConfigurationList;
